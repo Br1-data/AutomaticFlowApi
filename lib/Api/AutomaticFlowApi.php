@@ -729,6 +729,11 @@ class AutomaticFlowApi
             }
         }
 
+         // this endpoint requires API key authentication
+         $apiKey = $this->config->getApiKeyWithPrefix('apikey');
+         if ($apiKey !== null) {
+             $headers['apikey'] = $apiKey;
+         }
 
         $defaultHeaders = [];
         if ($this->config->getUserAgent()) {
