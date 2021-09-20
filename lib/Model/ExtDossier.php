@@ -1,4 +1,5 @@
 <?php
+
 /**
  * ExtDossier
  *
@@ -44,33 +45,37 @@ class ExtDossier implements ModelInterface, ArrayAccess
     const DISCRIMINATOR = null;
 
     /**
-      * The original name of the model.
-      *
-      * @var string
-      */
+     * The original name of the model.
+     *
+     * @var string
+     */
     protected static $swaggerModelName = 'ExtDossier';
 
     /**
-      * Array of property to type mappings. Used for (de)serialization
-      *
-      * @var string[]
-      */
+     * Array of property to type mappings. Used for (de)serialization
+     *
+     * @var string[]
+     */
     protected static $swaggerTypes = [
         'flow_code' => 'string',
-'name' => 'string',
-'signers' => '\Swagger\Client\Model\ExtSigner[]',
-'documents' => '\Swagger\Client\Model\ExtDocument[]'    ];
+        'product_code' => 'string',
+        'name' => 'string',
+        'signers' => '\Swagger\Client\Model\ExtSigner[]',
+        'documents' => '\Swagger\Client\Model\ExtDocument[]'
+    ];
 
     /**
-      * Array of property to format mappings. Used for (de)serialization
-      *
-      * @var string[]
-      */
+     * Array of property to format mappings. Used for (de)serialization
+     *
+     * @var string[]
+     */
     protected static $swaggerFormats = [
         'flow_code' => null,
-'name' => null,
-'signers' => null,
-'documents' => null    ];
+        'product_code' => null,
+        'name' => null,
+        'signers' => null,
+        'documents' => null
+    ];
 
     /**
      * Array of property to type mappings. Used for (de)serialization
@@ -100,9 +105,11 @@ class ExtDossier implements ModelInterface, ArrayAccess
      */
     protected static $attributeMap = [
         'flow_code' => 'flowCode',
-'name' => 'name',
-'signers' => 'signers',
-'documents' => 'documents'    ];
+        'product_code' => 'productCode',
+        'name' => 'name',
+        'signers' => 'signers',
+        'documents' => 'documents'
+    ];
 
     /**
      * Array of attributes to setter functions (for deserialization of responses)
@@ -111,9 +118,11 @@ class ExtDossier implements ModelInterface, ArrayAccess
      */
     protected static $setters = [
         'flow_code' => 'setFlowCode',
-'name' => 'setName',
-'signers' => 'setSigners',
-'documents' => 'setDocuments'    ];
+        'product_code' => 'setProductCode',
+        'name' => 'setName',
+        'signers' => 'setSigners',
+        'documents' => 'setDocuments'
+    ];
 
     /**
      * Array of attributes to getter functions (for serialization of requests)
@@ -122,9 +131,11 @@ class ExtDossier implements ModelInterface, ArrayAccess
      */
     protected static $getters = [
         'flow_code' => 'getFlowCode',
-'name' => 'getName',
-'signers' => 'getSigners',
-'documents' => 'getDocuments'    ];
+        'product_code' => 'getProductCode',
+        'name' => 'getName',
+        'signers' => 'getSigners',
+        'documents' => 'getDocuments'
+    ];
 
     /**
      * Array of attributes where the key is the local name,
@@ -167,7 +178,6 @@ class ExtDossier implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
     /**
      * Associative array for storing property values
@@ -185,6 +195,7 @@ class ExtDossier implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['flow_code'] = isset($data['flow_code']) ? $data['flow_code'] : null;
+        $this->container['product_code'] = isset($data['product_code']) ? $data['product_code'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['signers'] = isset($data['signers']) ? $data['signers'] : null;
         $this->container['documents'] = isset($data['documents']) ? $data['documents'] : null;
@@ -234,6 +245,30 @@ class ExtDossier implements ModelInterface, ArrayAccess
     public function setFlowCode($flow_code)
     {
         $this->container['flow_code'] = $flow_code;
+
+        return $this;
+    }
+
+    /**
+     * Gets product_code
+     *
+     * @return string
+     */
+    public function getProductCode()
+    {
+        return $this->container['product_code'];
+    }
+
+    /**
+     * Sets product_code
+     *
+     * @param string $product_code Required, it identifies the workflow that will be executed. The list of possible values will be provided by Sixtema.
+     *
+     * @return $this
+     */
+    public function setProductCode($product_code)
+    {
+        $this->container['product_code'] = $product_code;
 
         return $this;
     }
