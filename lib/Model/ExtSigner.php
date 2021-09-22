@@ -1,4 +1,5 @@
 <?php
+
 /**
  * ExtSigner
  *
@@ -45,79 +46,83 @@ class ExtSigner implements ModelInterface, ArrayAccess
     const DISCRIMINATOR = null;
 
     /**
-      * The original name of the model.
-      *
-      * @var string
-      */
+     * The original name of the model.
+     *
+     * @var string
+     */
     protected static $swaggerModelName = 'ExtSigner';
 
     /**
-      * Array of property to type mappings. Used for (de)serialization
-      *
-      * @var string[]
-      */
+     * Array of property to type mappings. Used for (de)serialization
+     *
+     * @var string[]
+     */
     protected static $swaggerTypes = [
         'signer_type_code' => 'string',
-'id' => 'string',
-'surname' => 'string',
-'name' => 'string',
-'tax_code' => 'string',
-'sex' => 'string',
-'phone' => 'string',
-'mail' => 'string',
-'citizenship' => 'string',
-'birth_date' => '\DateTime',
-'birth_province' => 'string',
-'birth_city' => 'string',
-'birth_country' => 'string',
-'residence_province' => 'string',
-'residence_city' => 'string',
-'residence_address' => 'string',
-'residence_address_number' => 'string',
-'residence_cap' => 'string',
-'residence_country' => 'string',
-'identification_doc_type' => 'string',
-'identification_doc_number' => 'string',
-'identification_doc_release_authority' => 'string',
-'identification_doc_country' => 'string',
-'identification_doc_city_release' => 'string',
-'identification_doc_province_release' => 'string',
-'identification_doc_release_date' => '\DateTime',
-'identification_doc_expiration_date' => '\DateTime'    ];
+        'flow_process_code' => 'string',
+        'id' => 'string',
+        'surname' => 'string',
+        'name' => 'string',
+        'tax_code' => 'string',
+        'sex' => 'string',
+        'phone' => 'string',
+        'mail' => 'string',
+        'citizenship' => 'string',
+        'birth_date' => '\DateTime',
+        'birth_province' => 'string',
+        'birth_city' => 'string',
+        'birth_country' => 'string',
+        'residence_province' => 'string',
+        'residence_city' => 'string',
+        'residence_address' => 'string',
+        'residence_address_number' => 'string',
+        'residence_cap' => 'string',
+        'residence_country' => 'string',
+        'identification_doc_type' => 'string',
+        'identification_doc_number' => 'string',
+        'identification_doc_release_authority' => 'string',
+        'identification_doc_country' => 'string',
+        'identification_doc_city_release' => 'string',
+        'identification_doc_province_release' => 'string',
+        'identification_doc_release_date' => '\DateTime',
+        'identification_doc_expiration_date' => '\DateTime'
+    ];
 
     /**
-      * Array of property to format mappings. Used for (de)serialization
-      *
-      * @var string[]
-      */
+     * Array of property to format mappings. Used for (de)serialization
+     *
+     * @var string[]
+     */
     protected static $swaggerFormats = [
         'signer_type_code' => null,
-'id' => null,
-'surname' => null,
-'name' => null,
-'tax_code' => null,
-'sex' => null,
-'phone' => null,
-'mail' => null,
-'citizenship' => null,
-'birth_date' => 'date-time',
-'birth_province' => null,
-'birth_city' => null,
-'birth_country' => null,
-'residence_province' => null,
-'residence_city' => null,
-'residence_address' => null,
-'residence_address_number' => null,
-'residence_cap' => null,
-'residence_country' => null,
-'identification_doc_type' => null,
-'identification_doc_number' => null,
-'identification_doc_release_authority' => null,
-'identification_doc_country' => null,
-'identification_doc_city_release' => null,
-'identification_doc_province_release' => null,
-'identification_doc_release_date' => 'date-time',
-'identification_doc_expiration_date' => 'date-time'    ];
+        'flow_process_code' => null,
+        'id' => null,
+        'surname' => null,
+        'name' => null,
+        'tax_code' => null,
+        'sex' => null,
+        'phone' => null,
+        'mail' => null,
+        'citizenship' => null,
+        'birth_date' => 'date-time',
+        'birth_province' => null,
+        'birth_city' => null,
+        'birth_country' => null,
+        'residence_province' => null,
+        'residence_city' => null,
+        'residence_address' => null,
+        'residence_address_number' => null,
+        'residence_cap' => null,
+        'residence_country' => null,
+        'identification_doc_type' => null,
+        'identification_doc_number' => null,
+        'identification_doc_release_authority' => null,
+        'identification_doc_country' => null,
+        'identification_doc_city_release' => null,
+        'identification_doc_province_release' => null,
+        'identification_doc_release_date' => 'date-time',
+        'identification_doc_expiration_date' => 'date-time'
+    ];
 
     /**
      * Array of property to type mappings. Used for (de)serialization
@@ -147,32 +152,34 @@ class ExtSigner implements ModelInterface, ArrayAccess
      */
     protected static $attributeMap = [
         'signer_type_code' => 'signerTypeCode',
-'id' => 'id',
-'surname' => 'surname',
-'name' => 'name',
-'tax_code' => 'taxCode',
-'sex' => 'sex',
-'phone' => 'phone',
-'mail' => 'mail',
-'citizenship' => 'citizenship',
-'birth_date' => 'birthDate',
-'birth_province' => 'birthProvince',
-'birth_city' => 'birthCity',
-'birth_country' => 'birthCountry',
-'residence_province' => 'residenceProvince',
-'residence_city' => 'residenceCity',
-'residence_address' => 'residenceAddress',
-'residence_address_number' => 'residenceAddressNumber',
-'residence_cap' => 'residenceCap',
-'residence_country' => 'residenceCountry',
-'identification_doc_type' => 'identificationDocType',
-'identification_doc_number' => 'identificationDocNumber',
-'identification_doc_release_authority' => 'identificationDocReleaseAuthority',
-'identification_doc_country' => 'identificationDocCountry',
-'identification_doc_city_release' => 'identificationDocCityRelease',
-'identification_doc_province_release' => 'identificationDocProvinceRelease',
-'identification_doc_release_date' => 'identificationDocReleaseDate',
-'identification_doc_expiration_date' => 'identificationDocExpirationDate'    ];
+        'flow_process_code' => 'flowProcessCode',
+        'id' => 'id',
+        'surname' => 'surname',
+        'name' => 'name',
+        'tax_code' => 'taxCode',
+        'sex' => 'sex',
+        'phone' => 'phone',
+        'mail' => 'mail',
+        'citizenship' => 'citizenship',
+        'birth_date' => 'birthDate',
+        'birth_province' => 'birthProvince',
+        'birth_city' => 'birthCity',
+        'birth_country' => 'birthCountry',
+        'residence_province' => 'residenceProvince',
+        'residence_city' => 'residenceCity',
+        'residence_address' => 'residenceAddress',
+        'residence_address_number' => 'residenceAddressNumber',
+        'residence_cap' => 'residenceCap',
+        'residence_country' => 'residenceCountry',
+        'identification_doc_type' => 'identificationDocType',
+        'identification_doc_number' => 'identificationDocNumber',
+        'identification_doc_release_authority' => 'identificationDocReleaseAuthority',
+        'identification_doc_country' => 'identificationDocCountry',
+        'identification_doc_city_release' => 'identificationDocCityRelease',
+        'identification_doc_province_release' => 'identificationDocProvinceRelease',
+        'identification_doc_release_date' => 'identificationDocReleaseDate',
+        'identification_doc_expiration_date' => 'identificationDocExpirationDate'
+    ];
 
     /**
      * Array of attributes to setter functions (for deserialization of responses)
@@ -181,32 +188,34 @@ class ExtSigner implements ModelInterface, ArrayAccess
      */
     protected static $setters = [
         'signer_type_code' => 'setSignerTypeCode',
-'id' => 'setId',
-'surname' => 'setSurname',
-'name' => 'setName',
-'tax_code' => 'setTaxCode',
-'sex' => 'setSex',
-'phone' => 'setPhone',
-'mail' => 'setMail',
-'citizenship' => 'setCitizenship',
-'birth_date' => 'setBirthDate',
-'birth_province' => 'setBirthProvince',
-'birth_city' => 'setBirthCity',
-'birth_country' => 'setBirthCountry',
-'residence_province' => 'setResidenceProvince',
-'residence_city' => 'setResidenceCity',
-'residence_address' => 'setResidenceAddress',
-'residence_address_number' => 'setResidenceAddressNumber',
-'residence_cap' => 'setResidenceCap',
-'residence_country' => 'setResidenceCountry',
-'identification_doc_type' => 'setIdentificationDocType',
-'identification_doc_number' => 'setIdentificationDocNumber',
-'identification_doc_release_authority' => 'setIdentificationDocReleaseAuthority',
-'identification_doc_country' => 'setIdentificationDocCountry',
-'identification_doc_city_release' => 'setIdentificationDocCityRelease',
-'identification_doc_province_release' => 'setIdentificationDocProvinceRelease',
-'identification_doc_release_date' => 'setIdentificationDocReleaseDate',
-'identification_doc_expiration_date' => 'setIdentificationDocExpirationDate'    ];
+        'flow_process_code' => 'setFlowProcessCode',
+        'id' => 'setId',
+        'surname' => 'setSurname',
+        'name' => 'setName',
+        'tax_code' => 'setTaxCode',
+        'sex' => 'setSex',
+        'phone' => 'setPhone',
+        'mail' => 'setMail',
+        'citizenship' => 'setCitizenship',
+        'birth_date' => 'setBirthDate',
+        'birth_province' => 'setBirthProvince',
+        'birth_city' => 'setBirthCity',
+        'birth_country' => 'setBirthCountry',
+        'residence_province' => 'setResidenceProvince',
+        'residence_city' => 'setResidenceCity',
+        'residence_address' => 'setResidenceAddress',
+        'residence_address_number' => 'setResidenceAddressNumber',
+        'residence_cap' => 'setResidenceCap',
+        'residence_country' => 'setResidenceCountry',
+        'identification_doc_type' => 'setIdentificationDocType',
+        'identification_doc_number' => 'setIdentificationDocNumber',
+        'identification_doc_release_authority' => 'setIdentificationDocReleaseAuthority',
+        'identification_doc_country' => 'setIdentificationDocCountry',
+        'identification_doc_city_release' => 'setIdentificationDocCityRelease',
+        'identification_doc_province_release' => 'setIdentificationDocProvinceRelease',
+        'identification_doc_release_date' => 'setIdentificationDocReleaseDate',
+        'identification_doc_expiration_date' => 'setIdentificationDocExpirationDate'
+    ];
 
     /**
      * Array of attributes to getter functions (for serialization of requests)
@@ -215,32 +224,34 @@ class ExtSigner implements ModelInterface, ArrayAccess
      */
     protected static $getters = [
         'signer_type_code' => 'getSignerTypeCode',
-'id' => 'getId',
-'surname' => 'getSurname',
-'name' => 'getName',
-'tax_code' => 'getTaxCode',
-'sex' => 'getSex',
-'phone' => 'getPhone',
-'mail' => 'getMail',
-'citizenship' => 'getCitizenship',
-'birth_date' => 'getBirthDate',
-'birth_province' => 'getBirthProvince',
-'birth_city' => 'getBirthCity',
-'birth_country' => 'getBirthCountry',
-'residence_province' => 'getResidenceProvince',
-'residence_city' => 'getResidenceCity',
-'residence_address' => 'getResidenceAddress',
-'residence_address_number' => 'getResidenceAddressNumber',
-'residence_cap' => 'getResidenceCap',
-'residence_country' => 'getResidenceCountry',
-'identification_doc_type' => 'getIdentificationDocType',
-'identification_doc_number' => 'getIdentificationDocNumber',
-'identification_doc_release_authority' => 'getIdentificationDocReleaseAuthority',
-'identification_doc_country' => 'getIdentificationDocCountry',
-'identification_doc_city_release' => 'getIdentificationDocCityRelease',
-'identification_doc_province_release' => 'getIdentificationDocProvinceRelease',
-'identification_doc_release_date' => 'getIdentificationDocReleaseDate',
-'identification_doc_expiration_date' => 'getIdentificationDocExpirationDate'    ];
+        'flow_process_code' => 'getFlowProcessCode',
+        'id' => 'getId',
+        'surname' => 'getSurname',
+        'name' => 'getName',
+        'tax_code' => 'getTaxCode',
+        'sex' => 'getSex',
+        'phone' => 'getPhone',
+        'mail' => 'getMail',
+        'citizenship' => 'getCitizenship',
+        'birth_date' => 'getBirthDate',
+        'birth_province' => 'getBirthProvince',
+        'birth_city' => 'getBirthCity',
+        'birth_country' => 'getBirthCountry',
+        'residence_province' => 'getResidenceProvince',
+        'residence_city' => 'getResidenceCity',
+        'residence_address' => 'getResidenceAddress',
+        'residence_address_number' => 'getResidenceAddressNumber',
+        'residence_cap' => 'getResidenceCap',
+        'residence_country' => 'getResidenceCountry',
+        'identification_doc_type' => 'getIdentificationDocType',
+        'identification_doc_number' => 'getIdentificationDocNumber',
+        'identification_doc_release_authority' => 'getIdentificationDocReleaseAuthority',
+        'identification_doc_country' => 'getIdentificationDocCountry',
+        'identification_doc_city_release' => 'getIdentificationDocCityRelease',
+        'identification_doc_province_release' => 'getIdentificationDocProvinceRelease',
+        'identification_doc_release_date' => 'getIdentificationDocReleaseDate',
+        'identification_doc_expiration_date' => 'getIdentificationDocExpirationDate'
+    ];
 
     /**
      * Array of attributes where the key is the local name,
@@ -283,7 +294,7 @@ class ExtSigner implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
+
 
     /**
      * Associative array for storing property values
@@ -301,6 +312,7 @@ class ExtSigner implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['signer_type_code'] = isset($data['signer_type_code']) ? $data['signer_type_code'] : null;
+        $this->container['flow_process_code'] = isset($data['flow_process_code']) ? $data['flow_process_code'] : null;
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['surname'] = isset($data['surname']) ? $data['surname'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
@@ -373,6 +385,30 @@ class ExtSigner implements ModelInterface, ArrayAccess
     public function setSignerTypeCode($signer_type_code)
     {
         $this->container['signer_type_code'] = $signer_type_code;
+
+        return $this;
+    }
+
+    /**
+     * Gets flow_process_code
+     *
+     * @return string
+     */
+    public function getFlowProcessCode()
+    {
+        return $this->container['flow_process_code'];
+    }
+
+    /**
+     * Sets flow_process_code
+     *
+     * @param string $flow_process_code Required, it identifies the type of sign process. The list of possible values will be provided by Sixtema.
+     *
+     * @return $this
+     */
+    public function setFlowProcessCode($flow_process_code)
+    {
+        $this->container['flow_process_code'] = $flow_process_code;
 
         return $this;
     }

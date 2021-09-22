@@ -83,6 +83,13 @@ class ExtSignerTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "flow_process_code"
+     */
+    public function testPropertyFlowProcessCode()
+    {
+    }
+
+    /**
      * Test attribute "id"
      */
     public function testPropertyId()

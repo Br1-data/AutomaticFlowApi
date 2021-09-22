@@ -4,9 +4,64 @@ All URIs are relative to */*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**workflowAutomaticCallbackWorkflowidOpEsitoProxydocumentidDocumentidGet**](AutomaticFlowApi.md#workflowautomaticcallbackworkflowidopesitoproxydocumentiddocumentidget) | **GET** /workflow/automatic/callback/{workflowid}/{op}/{esito}/{proxydocumentid}/{documentid} | 
 [**workflowAutomaticDossierIdDelete**](AutomaticFlowApi.md#workflowautomaticdossieriddelete) | **DELETE** /workflow/automatic/dossier/{id} | Delete dossier by id
 [**workflowAutomaticDossierIdGet**](AutomaticFlowApi.md#workflowautomaticdossieridget) | **GET** /workflow/automatic/dossier/{id} | Retrieve dossier by id
 [**workflowAutomaticDossierPost**](AutomaticFlowApi.md#workflowautomaticdossierpost) | **POST** /workflow/automatic/dossier | Entry point for dossier submission
+
+# **workflowAutomaticCallbackWorkflowidOpEsitoProxydocumentidDocumentidGet**
+> workflowAutomaticCallbackWorkflowidOpEsitoProxydocumentidDocumentidGet($workflowid, $op, $esito, $proxydocumentid, $documentid)
+
+
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$apiInstance = new Swagger\Client\Api\AutomaticFlowApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
+$workflowid = "workflowid_example"; // string | 
+$op = "op_example"; // string | 
+$esito = "esito_example"; // string | 
+$proxydocumentid = "proxydocumentid_example"; // string | 
+$documentid = "documentid_example"; // string | 
+
+try {
+    $apiInstance->workflowAutomaticCallbackWorkflowidOpEsitoProxydocumentidDocumentidGet($workflowid, $op, $esito, $proxydocumentid, $documentid);
+} catch (Exception $e) {
+    echo 'Exception when calling AutomaticFlowApi->workflowAutomaticCallbackWorkflowidOpEsitoProxydocumentidDocumentidGet: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **workflowid** | **string**|  |
+ **op** | **string**|  |
+ **esito** | **string**|  | [optional]
+ **proxydocumentid** | **string**|  | [optional]
+ **documentid** | **string**|  | [optional]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **workflowAutomaticDossierIdDelete**
 > workflowAutomaticDossierIdDelete($id)

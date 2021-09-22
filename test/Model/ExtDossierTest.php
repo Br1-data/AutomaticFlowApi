@@ -83,6 +83,13 @@ class ExtDossierTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "product_code"
+     */
+    public function testPropertyProductCode()
+    {
+    }
+
+    /**
      * Test attribute "name"
      */
     public function testPropertyName()
@@ -100,6 +107,27 @@ class ExtDossierTest extends \PHPUnit_Framework_TestCase
      * Test attribute "documents"
      */
     public function testPropertyDocuments()
+    {
+    }
+
+    /**
+     * Test attribute "company_id"
+     */
+    public function testPropertyCompanyId()
+    {
+    }
+
+    /**
+     * Test attribute "agency_id"
+     */
+    public function testPropertyAgencyId()
+    {
+    }
+
+    /**
+     * Test attribute "username"
+     */
+    public function testPropertyUsername()
     {
     }
 }

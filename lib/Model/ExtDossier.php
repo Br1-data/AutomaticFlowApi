@@ -61,7 +61,10 @@ class ExtDossier implements ModelInterface, ArrayAccess
         'product_code' => 'string',
         'name' => 'string',
         'signers' => '\Swagger\Client\Model\ExtSigner[]',
-        'documents' => '\Swagger\Client\Model\ExtDocument[]'
+        'documents' => '\Swagger\Client\Model\ExtDocument[]',
+        'company_id' => 'int',
+        'agency_id' => 'int',
+        'username' => 'string'
     ];
 
     /**
@@ -74,7 +77,10 @@ class ExtDossier implements ModelInterface, ArrayAccess
         'product_code' => null,
         'name' => null,
         'signers' => null,
-        'documents' => null
+        'documents' => null,
+        'company_id' => 'int64',
+        'agency_id' => 'int64',
+        'username' => null
     ];
 
     /**
@@ -108,7 +114,10 @@ class ExtDossier implements ModelInterface, ArrayAccess
         'product_code' => 'productCode',
         'name' => 'name',
         'signers' => 'signers',
-        'documents' => 'documents'
+        'documents' => 'documents',
+        'company_id' => 'companyId',
+        'agency_id' => 'agencyId',
+        'username' => 'username'
     ];
 
     /**
@@ -121,7 +130,10 @@ class ExtDossier implements ModelInterface, ArrayAccess
         'product_code' => 'setProductCode',
         'name' => 'setName',
         'signers' => 'setSigners',
-        'documents' => 'setDocuments'
+        'documents' => 'setDocuments',
+        'company_id' => 'setCompanyId',
+        'agency_id' => 'setAgencyId',
+        'username' => 'setUsername'
     ];
 
     /**
@@ -134,7 +146,10 @@ class ExtDossier implements ModelInterface, ArrayAccess
         'product_code' => 'getProductCode',
         'name' => 'getName',
         'signers' => 'getSigners',
-        'documents' => 'getDocuments'
+        'documents' => 'getDocuments',
+        'company_id' => 'getCompanyId',
+        'agency_id' => 'getAgencyId',
+        'username' => 'getUsername'
     ];
 
     /**
@@ -179,6 +194,7 @@ class ExtDossier implements ModelInterface, ArrayAccess
     }
 
 
+
     /**
      * Associative array for storing property values
      *
@@ -199,6 +215,9 @@ class ExtDossier implements ModelInterface, ArrayAccess
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['signers'] = isset($data['signers']) ? $data['signers'] : null;
         $this->container['documents'] = isset($data['documents']) ? $data['documents'] : null;
+        $this->container['company_id'] = isset($data['company_id']) ? $data['company_id'] : null;
+        $this->container['agency_id'] = isset($data['agency_id']) ? $data['agency_id'] : null;
+        $this->container['username'] = isset($data['username']) ? $data['username'] : null;
     }
 
     /**
@@ -262,7 +281,7 @@ class ExtDossier implements ModelInterface, ArrayAccess
     /**
      * Sets product_code
      *
-     * @param string $product_code Required, it identifies the workflow that will be executed. The list of possible values will be provided by Sixtema.
+     * @param string $product_code Required, it identifies the product that will be signed. The list of possible values will be provided by Sixtema.
      *
      * @return $this
      */
@@ -341,6 +360,78 @@ class ExtDossier implements ModelInterface, ArrayAccess
     public function setDocuments($documents)
     {
         $this->container['documents'] = $documents;
+
+        return $this;
+    }
+
+    /**
+     * Gets company_id
+     *
+     * @return int
+     */
+    public function getCompanyId()
+    {
+        return $this->container['company_id'];
+    }
+
+    /**
+     * Sets company_id
+     *
+     * @param int $company_id company_id
+     *
+     * @return $this
+     */
+    public function setCompanyId($company_id)
+    {
+        $this->container['company_id'] = $company_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets agency_id
+     *
+     * @return int
+     */
+    public function getAgencyId()
+    {
+        return $this->container['agency_id'];
+    }
+
+    /**
+     * Sets agency_id
+     *
+     * @param int $agency_id agency_id
+     *
+     * @return $this
+     */
+    public function setAgencyId($agency_id)
+    {
+        $this->container['agency_id'] = $agency_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets username
+     *
+     * @return string
+     */
+    public function getUsername()
+    {
+        return $this->container['username'];
+    }
+
+    /**
+     * Sets username
+     *
+     * @param string $username username
+     *
+     * @return $this
+     */
+    public function setUsername($username)
+    {
+        $this->container['username'] = $username;
 
         return $this;
     }

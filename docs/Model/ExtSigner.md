@@ -4,6 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **signer_type_code** | **string** | Required, it identifies the type of signer. The list of possible values will be provided by Sixtema. | [optional] 
+**flow_process_code** | **string** | Required, it identifies the type of sign process. The list of possible values will be provided by Sixtema. | [optional] 
 **id** | **string** |  | [optional] 
 **surname** | **string** |  | [optional] 
 **name** | **string** |  | [optional] 

@@ -71,6 +71,16 @@ class AutomaticFlowApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for workflowAutomaticCallbackWorkflowidOpEsitoProxydocumentidDocumentidGet
+     *
+     * .
+     *
+     */
+    public function testWorkflowAutomaticCallbackWorkflowidOpEsitoProxydocumentidDocumentidGet()
+    {
+    }
+
+    /**
      * Test case for workflowAutomaticDossierIdDelete
      *
      * Delete dossier by id.

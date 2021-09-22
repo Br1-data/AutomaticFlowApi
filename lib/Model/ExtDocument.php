@@ -1,4 +1,5 @@
 <?php
+
 /**
  * ExtDocument
  *
@@ -45,35 +46,37 @@ class ExtDocument implements ModelInterface, ArrayAccess
     const DISCRIMINATOR = null;
 
     /**
-      * The original name of the model.
-      *
-      * @var string
-      */
+     * The original name of the model.
+     *
+     * @var string
+     */
     protected static $swaggerModelName = 'ExtDocument';
 
     /**
-      * Array of property to type mappings. Used for (de)serialization
-      *
-      * @var string[]
-      */
+     * Array of property to type mappings. Used for (de)serialization
+     *
+     * @var string[]
+     */
     protected static $swaggerTypes = [
         'document_type_code' => 'string',
-'file' => 'string',
-'name' => 'string',
-'id' => 'string',
-'reasons' => '\Swagger\Client\Model\ExtReason[]'    ];
+        'file' => 'string',
+        'name' => 'string',
+        'id' => 'string',
+        'reasons' => '\Swagger\Client\Model\ExtReason[]'
+    ];
 
     /**
-      * Array of property to format mappings. Used for (de)serialization
-      *
-      * @var string[]
-      */
+     * Array of property to format mappings. Used for (de)serialization
+     *
+     * @var string[]
+     */
     protected static $swaggerFormats = [
         'document_type_code' => null,
-'file' => 'byte',
-'name' => null,
-'id' => null,
-'reasons' => null    ];
+        'file' => null,
+        'name' => null,
+        'id' => null,
+        'reasons' => null
+    ];
 
     /**
      * Array of property to type mappings. Used for (de)serialization
@@ -103,10 +106,11 @@ class ExtDocument implements ModelInterface, ArrayAccess
      */
     protected static $attributeMap = [
         'document_type_code' => 'documentTypeCode',
-'file' => 'file',
-'name' => 'name',
-'id' => 'id',
-'reasons' => 'reasons'    ];
+        'file' => 'file',
+        'name' => 'name',
+        'id' => 'id',
+        'reasons' => 'reasons'
+    ];
 
     /**
      * Array of attributes to setter functions (for deserialization of responses)
@@ -115,10 +119,11 @@ class ExtDocument implements ModelInterface, ArrayAccess
      */
     protected static $setters = [
         'document_type_code' => 'setDocumentTypeCode',
-'file' => 'setFile',
-'name' => 'setName',
-'id' => 'setId',
-'reasons' => 'setReasons'    ];
+        'file' => 'setFile',
+        'name' => 'setName',
+        'id' => 'setId',
+        'reasons' => 'setReasons'
+    ];
 
     /**
      * Array of attributes to getter functions (for serialization of requests)
@@ -127,10 +132,11 @@ class ExtDocument implements ModelInterface, ArrayAccess
      */
     protected static $getters = [
         'document_type_code' => 'getDocumentTypeCode',
-'file' => 'getFile',
-'name' => 'getName',
-'id' => 'getId',
-'reasons' => 'getReasons'    ];
+        'file' => 'getFile',
+        'name' => 'getName',
+        'id' => 'getId',
+        'reasons' => 'getReasons'
+    ];
 
     /**
      * Array of attributes where the key is the local name,
@@ -173,7 +179,7 @@ class ExtDocument implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
+
 
     /**
      * Associative array for storing property values
@@ -258,7 +264,7 @@ class ExtDocument implements ModelInterface, ArrayAccess
     /**
      * Sets file
      *
-     * @param string $file Required, document bytes array.
+     * @param string $file Required, document base64 encoding.
      *
      * @return $this
      */
