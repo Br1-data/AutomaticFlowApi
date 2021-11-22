@@ -36,6 +36,7 @@ use GuzzleHttp\RequestOptions;
 use Swagger\Client\ApiException;
 use Swagger\Client\Configuration;
 use Swagger\Client\HeaderSelector;
+use Swagger\Client\Model\ExtDocument;
 use Swagger\Client\ObjectSerializer;
 
 /**
@@ -591,7 +592,8 @@ class AutomaticFlowApi
      */
     public function workflowAutomaticDossierIdGet($id)
     {
-        $this->workflowAutomaticDossierIdGetWithHttpInfo($id);
+        return $this->workflowAutomaticDossierIdGetWithHttpInfo($id);
+        // return $response;
     }
 
     /**
@@ -607,7 +609,7 @@ class AutomaticFlowApi
      */
     public function workflowAutomaticDossierIdGetWithHttpInfo($id)
     {
-        $returnType = '';
+        $returnType = '\Swagger\Client\Model\Response';
         $request = $this->workflowAutomaticDossierIdGetRequest($id);
 
         try {
@@ -638,10 +640,32 @@ class AutomaticFlowApi
                 );
             }
 
-            return [null, $statusCode, $response->getHeaders()];
+            $responseBody = $response->getBody();
+            if ($returnType === '\SplFileObject') {
+                $content = $responseBody; //stream goes to serializer
+            } else {
+                $content = $responseBody->getContents();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
 
         } catch (ApiException $e) {
             switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Swagger\Client\Model\Response',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
             }
             throw $e;
         }
